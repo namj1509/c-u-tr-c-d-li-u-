@@ -1,0 +1,45 @@
+#include<stdio.h> 
+#include<conio.h>
+struct Ngay {
+    int ngay;
+    int thang;
+    int nam;
+};
+struct hopsua { 
+    string nhanhieu;
+    float trongluong;
+    DATE hansudung;
+}; 
+   void nhapNgay(Ngay &ngay) {
+    cout << "Nhap ngay: ";
+    cin >> ngay.ngay;
+    cout << "Nhap thang: ";
+    cin >> ngay.thang;
+    cout << "Nhap nam: ";
+    cin >> ngay.nam;
+} 
+   void xuatNgay(Ngay ngay) {
+    cout << ngay.ngay << "/" << ngay.thang << "/" << ngay.nam;
+} 
+ void nhapHOPSUA(HOPSUA &hs) {
+    cout << "Nhap nhan hieu: ";
+    cin >> hs.nhanHieu;
+    cout << "Nhap trong luong: ";
+    cin >> hs.trongLuong;
+    cout << "Nhap han su dung: " << endl;
+    nhapNgay(hs.hanSuDung);
+} 
+ void xuatHOPSUA(HOPSUA hs) {
+    cout << "Nhan hieu: " << hs.nhanHieu << endl;
+    cout << "Trong luong: " << hs.trongLuong << endl;
+    cout << "Han su dung: ";
+    xuatNgay(hs.hanSuDung);
+} 
+  int main() {
+    HOPSUA hs;
+    cout << "Nhap thong tin hop sua: " << endl;
+    nhapHOPSUA(hs);
+    cout << endl << "Thong tin hop sua: " << endl;
+    xuatHOPSUA(hs);
+    return 0;
+}
