@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<conio.h>
+struct thoigian {
+  int gio;
+  int phut; 
+};
+ struct NGAY { 
+  int ngay;
+  int thang;
+  int nam;
+ struct vexemphim {
+  int giatien;
+  char tenphim [20];
+  TIME xuatchieu;
+  DATE ngayxem; 
+ };
+  void nhap(VE &v) {
+    cout << "Nhap ten phim: ";
+    cin.getline(v.tenPhim, 21);
+
+    cout << "Nhap gia tien: ";
+    cin >> v.giaTien;
+
+    cout << "Nhap thoi gian xuat chieu (gio phut): ";
+    cin >> v.xuatChieu.gio >> v.xuatChieu.phut;
+
+    cout << "Nhap ngay xem (ngay thang nam): ";
+    cin >> v.ngayXem.ngay >> v.ngayXem.thang >> v.ngayXem.nam;
+}
+
+void xuat(VE v) {
+    cout << "Ten phim: " << v.tenPhim << endl;
+    cout << "Gia tien: " << v.giaTien << endl;
+    cout << "Thoi gian xuat chieu: " << v.xuatChieu.gio << ":" << v.xuatChieu.phut << endl;
+    cout << "Ngay xem: " << v.ngayXem.ngay << "/" << v.ngayXem.thang << "/" << v.ngayXem.nam << endl;
+} 
+int main() {
+    VE v;
+
+    nhap(v);
+    xuat(v);
+
+    return 0;
+}
+  
