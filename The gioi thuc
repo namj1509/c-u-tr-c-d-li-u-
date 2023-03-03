@@ -1,0 +1,19 @@
+#include <iostream> 
+using namespace std; 
+void inputdate (Date & d) {
+cout << "Enter day:";
+cin >> d.day;
+cout << " Enter month:"; 
+cin >> d.month;
+cout << " Enter year:";
+cin >> d.year;
+}
+void outputdate(Date d) {
+cout << d.day "/" << d.month << "/" << d.year << endl;
+}
+int manin () {
+Date myDate;
+inputdate(myDate);
+outputdate(myDate);
+return 0;
+} 
