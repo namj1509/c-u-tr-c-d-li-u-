@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+struct Line {
+    double a, b, c;
+};
+
+void input(Line &line) {
+    cout << "Enter a, b, c: ";
+    cin >> line.a >> line.b >> line.c;
+}
+
+void output(Line line) {
+    cout << line.a << "x + " << line.b << "y + " << line.c << " = 0" << endl;
+}
+
+int main() {
+    Line line;
+    input(line);
+    output(line);
+    return 0;
+}
