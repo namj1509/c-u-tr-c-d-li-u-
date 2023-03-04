@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+struct MATHANG {
+    char ten[21];   
+    int don_gia;   
+    int so_luong_ton;
+    };
+void nhap(MATHANG &mh) {
+    cout << "Nhap ten mat hang: ";
+    cin.getline(mh.ten, 21);
+    cout << "Nhap don gia: ";
+    cin >> mh.don_gia;
+    cout << "Nhap so luong ton: ";
+    cin >> mh.so_luong_ton;
+}
+
+void xuat(MATHANG mh) {
+    cout << "Ten mat hang: " << mh.ten << endl;
+    cout << "Don gia: " << mh.don_gia << endl;
+    cout << "So luong ton: " << mh.so_luong_ton << endl;
+}
+
+int main() {
+    MATHANG mh;
+    nhap(mh);
+    xuat(mh);
+    return 0;
+}
