@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+struct Circle {
+    double x, y;
+    double r;
+};
+
+void input(Circle &c) {
+    cout << "Enter x, y, r: ";
+    cin >> c.x >> c.y >> c.r;
+}
+
+void output(Circle c) {
+    cout << "Circle with center (" << c.x << ", " << c.y << ") and radius " << c.r << endl;
+}
+
+int main() {
+    Circle c;
+    input(c);
+    output(c);
+    return 0;
+}
