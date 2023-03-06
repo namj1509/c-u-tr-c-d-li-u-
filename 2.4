@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int countPositive(float arr[], int n) {
+    if (n == 0) {
+        return 0;
+    }
+    else {
+        int count = countPositive(arr, n-1);
+        if (arr[n-1] > 0) {
+            count++;
+        }
+        return count;
+    }
+}
+
+int main() {
+    float arr[] = {1.5, -2.0, 3.7, 0.0, -5.2, 6.1, -7.3};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int count = countPositive(arr, n);
+    cout << "Number of positive values in the array: " << count << endl;
+    return 0;
+}
